@@ -10,6 +10,6 @@ app.get('/', function (request, response) {
   console.log('GET request for homepage')
 })
 
-server.listen(80, "0.0.0.0", function () {
-  console.log('Server started and listening on port 80...')
+server.listen(3000, "0.0.0.0", function () {
+  console.log('Server started and listening on port 3000...')
 })
