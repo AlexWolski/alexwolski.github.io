@@ -5,11 +5,11 @@ var server = require('http').createServer(app);
 app.use(express.static(__dirname + '/view'))
 
 app.get('/', function (request, response) {
-  console.log('GET request made for the root /')
   response.status(200)
   response.sendFile('view/index.html', { root: __dirname })
+  console.log('GET request for homepage')
 })
 
-server.listen(3000, function () {
-  console.log('Server started and listening on port 3000...')
+server.listen(80, "0.0.0.0", function () {
+  console.log('Server started and listening on port 80...')
 })
