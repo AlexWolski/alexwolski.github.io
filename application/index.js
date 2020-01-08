@@ -1,8 +1,10 @@
 const express = require('express');
 const app = express();
 var server = require('http').createServer(app);
+const router = require('./controller/routes.js')
 
 app.use(express.static(__dirname + '/view'))
+app.use(router)
 
 app.get('/', function (request, response) {
   response.status(200)
