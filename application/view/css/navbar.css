@@ -23,10 +23,18 @@
 }
 
 .nav-link {
-  color: white !important;
   font-weight: 500;
   text-decoration: underline;
   font-size: 25px;
+}
+
+.nav-unselected {
+  color: white !important;
+}
+
+.nav-selected {
+  color: #C0C0C0 !important;
+  text-decoration: none;
 }
 
 .nav-link:hover {

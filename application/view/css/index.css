@@ -1,3 +1,8 @@
+#navbar-placeholder {
+  height: 78px;
+  background-color: #494949;
+}
+
 #page-container {
   position: relative;
   min-height: 100vh;

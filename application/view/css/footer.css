@@ -7,10 +7,6 @@
   text-align: center;
 }
 
-#footer-copyright {
-  padding-top: 5px;
-}
-
 .footer-link {
   color: white;
   font-size: 20px;
@@ -25,8 +21,7 @@
   position: relative;
 }
 
-#copied-popup
-{
+#copied-popup {
   background-color: #707070;
   color: white;
   font-weight: normal;
@@ -39,16 +34,9 @@
   left: calc(-1 * (40px - 20px));
   bottom: 65px;
   pointer-events: none;
-
-  user-select: none;
-  -moz-user-select: none;
-  -khtml-user-select: none;
-  -webkit-user-select: none;
-  -o-user-select: none;
 }
 
-#popup-triangle
-{
+#popup-triangle {
   width: 0;
   height: 0;
   border-style: solid;
@@ -59,16 +47,21 @@
   left: calc(40px - 15px);
 }
 
-.fadeIn
-{
+.fadeIn {
   opacity: 1;
   visibility: visible;
   transition: visibility 0s, opacity 0.1s linear;
 }
 
-.fadeOut
-{
+.fadeOut {
   opacity: 0;
   visibility: hidden;
   transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.unselectable {
+  -webkit-user-select: none;  /* Chrome & Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
 }
