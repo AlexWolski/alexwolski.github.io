@@ -1,0 +1,3 @@
+function copyEmail() {
+	alert("copied!");
+}

@@ -3,7 +3,7 @@ function loadNavbar() {
 
   xmlReq.onreadystatechange= function() {
     if (this.readyState !== 4)
-      return
+      return;
 
   	//Load the navbar
     document.getElementById('navbar-placeholder').innerHTML= this.responseText;
