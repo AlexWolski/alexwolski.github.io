@@ -2,14 +2,26 @@ html, body {
   background-color: #D5DCE3;
 }
 
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#page-content {
+  min-height: calc(100vh - 78px - 75px);
+}
+
 #footer {
-  padding-top: 10px;
-  position: absolute;
-  bottom: 0px;
+  display: block;
+  height: 75px;
   color: white;
   background-color: black;
   width: 100%;
   text-align: center;
+}
+
+#footer-copyright {
+  padding-top: 5px;
 }
 
 .footer-link {
@@ -22,4 +34,32 @@ html, body {
   color: #C0C0C0;
   text-decoration: none;
   cursor: pointer;
+}
+
+#copied-popup
+{
+  position: absolute;
+}
+
+.fadeIn
+{
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+
+.fadeOut
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.copiedPopup
+{
+  background: none repeat scroll 0 0 #f5f;
+  border: 5px solid #808080;
+  border-radius: 50px;
+  padding: 10px;
+  width: 250px;
 }
