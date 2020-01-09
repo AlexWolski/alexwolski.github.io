@@ -22,7 +22,7 @@
 }
 
 #copied-popup {
-  background-color: #707070;
+  background-color: #2481FF;
   color: white;
   font-weight: normal;
   width: 80px;
@@ -41,7 +41,7 @@
   height: 0;
   border-style: solid;
   border-width: 10px 15px 0 15px;
-  border-color: #707070 transparent transparent transparent;
+  border-color: #2481FF transparent transparent transparent;
   position: absolute;
   /* Center the triangle below the popup body */
   left: calc(40px - 15px);
