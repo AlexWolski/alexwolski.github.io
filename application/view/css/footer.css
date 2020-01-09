@@ -1,0 +1,61 @@
+#footer {
+  display: block;
+  height: 75px;
+  color: white;
+  background-color: black;
+  width: 100%;
+  text-align: center;
+}
+
+#footer-copyright {
+  padding-top: 5px;
+}
+
+.footer-link {
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.footer-link:hover {
+  color: #C0C0C0;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+}
+
+#copied-popup
+{
+  background-color: #909090;
+  color: white;
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  /* Center the popup above the parent */
+  left: calc(-1 * (40px - 20px));
+  bottom: 40px;
+  pointer-events: none;
+
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.fadeIn
+{
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+
+.fadeOut
+{
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
