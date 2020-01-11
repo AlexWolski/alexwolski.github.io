@@ -16,10 +16,10 @@ function copyEmail() {
   
   //Display a message that the email has been copied
   const copiedPopup = document.getElementById('copied-popup');
-  copiedPopup.className = 'fadeIn';
+  copiedPopup.className = 'fade-in';
   setTimeout(function(){
     sleep(1000);
-    copiedPopup.className = 'fadeOut';
+    copiedPopup.className = 'fade-out';
   }, 500);
 
 }
