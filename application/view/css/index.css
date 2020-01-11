@@ -1,5 +1,5 @@
 #navbar-placeholder {
-  height: 78px;
+  min-height: 78px;
   background-color: #494949;
 }
 
@@ -7,8 +7,8 @@
   background-color: #D5DCE3;
   /*The minimum height of the page is the height the screen minus the header and footer*/
   min-height: calc(100vh - 78px - 75px);
-  padding-left: 100px;
-  padding-right: 100px;
-  position: relative;
+  padding-left: 20%;
+  padding-right: 20%;
+  float: none;
   overflow: auto;
 }
