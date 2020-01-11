@@ -10,6 +10,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <!-- less.min.js import -->
+    <link rel="stylesheet/less" type="text/css" href="css/profilePicture.less" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
     <!-- Bluebird Promise library for IE support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
     <!-- Fonts -->
@@ -20,6 +23,7 @@
     <link href="css/footer.css" rel="stylesheet">
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/copyEmail.js"></script>
+    <script type="text/javascript" src="js/profilePicture.js"></script>
   </head>
 
   <body>
@@ -27,6 +31,20 @@
   	<div id="navbar-placeholder"></div>
     <!-- A container for the contents of the page -->
     <div id="page-content">
+      <!-- Progress circle for profile picture. Modified from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9 -->
+      <div class="radial-progress">
+        <div class="circle">
+          <div class="mask full">
+            <div class="fill"></div>
+          </div>
+          <div class="mask half">
+            <div class="fill"></div>
+            <div class="fill fix"></div>
+          </div>
+        </div>
+        <div class="inset"></div>
+        <img class="profile-picture" src="../images/profile-picture.jpg" alt="Profile picture">
+      </div>
     </div>
 
     <!-- Page footer -->
@@ -36,7 +54,7 @@
         <a class="footer-link fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/in/alexjwolski/"></a>
         <a class="footer-link fab fa-github" target="_blank" href="https://github.com/AlexWolski"></a>
         <div class="footer-link fas fa-envelope" onclick="copyEmail()">
-          <div id="copied-popup" class="fadeOut unselectable">
+          <div id="copied-popup" class="fade-out unselectable">
             Copied!
             <div id="popup-triangle"></div>
           </div>
