@@ -1,0 +1,14 @@
+#page-content {
+  padding-top: 100px;
+}
+
+.float-left {
+  float: left;
+  width: 40%;
+}
+
+.float-right {
+  float: right;
+  height: 400px;
+  width: 60%;
+}
