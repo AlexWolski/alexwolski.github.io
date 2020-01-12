@@ -24,6 +24,7 @@
 
 .nav-unselected {
   color: white !important;
+  transition: color 0.1s linear;
 }
 
 .nav-selected {
@@ -32,4 +33,5 @@
 
 .nav-link:hover {
   color: #C0C0C0 !important;
+  transition: color 0.1s linear;
 }

@@ -20,7 +20,10 @@ function loadNavbar() {
 
     	//Apply the appropriate styling
     	if(link.id !== String(page))
+      {
     		link.classList.add('nav-unselected');
+        link.style.color = "white";
+      }
     	else
     		link.classList.add('nav-selected');
     }
