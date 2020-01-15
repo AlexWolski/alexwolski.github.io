@@ -32,25 +32,27 @@
   	<div id="navbar-placeholder"></div>
     <!-- A container for the contents of the page -->
     <div id="page-content">
-      <!-- Progress circle for profile picture. Modified from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9 -->
-      <div class="radial-progress float-left">
-        <div class="circle">
-          <div class="mask full">
-            <div class="fill"></div>
+      <div class="flex-container">
+        <!-- Progress circle for profile picture. Modified from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9 -->
+        <div class="radial-progress">
+          <div class="circle">
+            <div class="mask full">
+              <div class="fill"></div>
+            </div>
+            <div class="mask half">
+              <div class="fill"></div>
+              <div class="fill fix"></div>
+            </div>
           </div>
-          <div class="mask half">
-            <div class="fill"></div>
-            <div class="fill fix"></div>
-          </div>
+          <div class="inset"></div>
+          <img class="profile-picture" src="../images/profile-picture.jpg" alt="Profile picture">
         </div>
-        <div class="inset"></div>
-        <img class="profile-picture" src="../images/profile-picture.jpg" alt="Profile picture">
-      </div>
-      <div class="float-right">
-      	<h1>Alex Wolski</h1>
-      	<h2>A software developer in the San Francisco bay area.</h2>
-      	<h2>Recent graduate from San Francisco State Univeristy</h2>
-      	<h2>Experienced in web design, application development, and game development!</h2>
+        <div class="intro-text">
+        	<h1>Alex Wolski</h1>
+        	<h2>A software developer in the San Francisco bay area.</h2>
+        	<h2>Recent graduate from San Francisco State Univeristy</h2>
+        	<h2>Experienced in web design, application development, and game development!</h2>
+        </div>
       </div>
     </div>
 
