@@ -15,22 +15,36 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
     <!-- Bluebird Promise library for IE support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
+    <!-- Adobe embedded PDF SDK -->
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <!-- Fonts -->
     <link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
     <!-- Imports -->
     <link href="css/font.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/resume.css" rel="stylesheet">
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/copyEmail.js"></script>
     <script type="text/javascript" src="js/profilePicture.js"></script>
   </head>
 
   <body>
-  	<!-- Will be substituted with the navbar once it loads -->
-  	<div id="navbar-placeholder"></div>
+    <!-- Will be substituted with the navbar once it loads -->
+    <div id="navbar-placeholder"></div>
     <!-- A container for the contents of the page -->
     <div id="page-content">
+      <!-- Embedded PDF file -->
+      <div id="adobe-dc-view"></div>
+      <script type="text/javascript">
+        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+          var adobeDCView = new AdobeDC.View({clientId: "41cb26db63cd42288135f1c23a0dd726", divId: "adobe-dc-view"});
+          adobeDCView.previewFile({
+            content:{location: {url: "http://alexwolski.com/documents/Resume - Alex Wolski 2020.pdf"}},
+            metaData:{fileName: "Resume - Alex Wolski 2020.pdf"}
+          }, {embedMode: "SIZED_CONTAINER"});
+        });
+      </script>
     </div>
 
     <!-- Page footer -->
