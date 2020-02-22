@@ -1,0 +1,24 @@
+.download-container {
+  height: 40px;
+  margin-right: 10%;
+  margin-bottom: 10px;
+}
+
+.download-button {
+  float: right;
+  width: 160px;
+  height: 40px;
+  background-color: #2481FF;
+  border-radius: 10px;
+
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.download-button:hover {
+  color: white;
+  text-decoration: none;
+}
