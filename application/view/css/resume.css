@@ -1,7 +1,6 @@
 #adobe-dc-view {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  min-height: 300px;
-  height: calc(80vh - 78px - 75px);
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
