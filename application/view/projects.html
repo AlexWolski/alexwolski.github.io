@@ -15,15 +15,11 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" ></script>
     <!-- Bluebird Promise library for IE support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-    <!-- Fonts -->
-    <link href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" rel="stylesheet">
     <!-- Imports -->
     <link href="css/font.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
-    <link href="css/footer.css" rel="stylesheet">
-    <script type="text/javascript" src="js/navbar.js"></script>
+    <script type="text/javascript" src="js/loadHtml.js"></script>
     <script type="text/javascript" src="js/copyEmail.js"></script>
-    <script type="text/javascript" src="js/profilePicture.js"></script>
   </head>
 
   <body>
@@ -34,25 +30,14 @@
       <h1 id="page-title"><b>Projects<b></h1>
     </div>
 
-    <!-- Page footer -->
-    <div id="footer">
-      <div style="padding-top: 5px;">Copyright © Alex Wolski 2019</div>
-      <div class="unselectable">
-        <a class="footer-link fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/in/alexjwolski/"></a>
-        <a class="footer-link fab fa-github" target="_blank" href="https://github.com/AlexWolski"></a>
-        <div class="footer-link fas fa-envelope" onclick="copyEmail()">
-          <div id="copied-popup" class="fade-out unselectable">
-            Copied!
-            <div id="popup-triangle"></div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- Will be substituted with the footer once it loads -->
+    <div id="footer-placeholder"></div>
   </body>
 
   <script type="text/javascript">
-    //Load the navbar when the page first loads
-    loadNavbar();
+    //Load the navbar and footer once the page loads
+    loadNavbar('navbar-placeholder');
+    loadFooter('footer-placeholder');
   </script>
 
 </html>

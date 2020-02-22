@@ -14,9 +14,14 @@ function copyEmail() {
   //Remove the textarea from the document
   document.body.removeChild(textArea);
   
-  //Display a message that the email has been copied
+  //A popup saying the email has been copied
   const copiedPopup = document.getElementById('copied-popup');
+  //When the page first loads, the popup is invisible. So make sure its visible
+  copiedPopup.style.display = 'block';
+  //Toggle the animation of the popup fading in
   copiedPopup.className = 'fade-in';
+
+  //After a set delay, fade the popup out
   setTimeout(function(){
     sleep(1000);
     copiedPopup.className = 'fade-out';

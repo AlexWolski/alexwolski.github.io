@@ -33,6 +33,8 @@
   padding: 5px;
   border-radius: 10px;
   position: absolute;
+  /* Hide popup when page first loads*/
+  display: none;
   /* Center the popup above the parent */
   left: calc(-1 * (40px - 20px));
   bottom: 65px;

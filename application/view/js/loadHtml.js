@@ -1,12 +1,12 @@
-function loadNavbar() {
+function loadNavbar(divID) {
   var xmlReq= new XMLHttpRequest();
 
   xmlReq.onreadystatechange = function() {
     if (this.readyState !== 4)
       return;
 
-  	//Load the navbar
-    document.getElementById('navbar-placeholder').innerHTML = this.responseText;
+  	//Add the html file to the specified div
+    document.getElementById(divID).innerHTML = this.responseText;
     //Get the current page from the url
     var page = location.pathname.split('/').slice(-1)
 
@@ -34,5 +34,20 @@ function loadNavbar() {
   }
   
   xmlReq.open('GET', 'navbar.html', true);
+  xmlReq.send();
+}
+
+function loadFooter(divID) {
+  var xmlReq= new XMLHttpRequest();
+
+  xmlReq.onreadystatechange = function() {
+    if (this.readyState !== 4)
+      return;
+
+    //Add the html file to the specified div
+    document.getElementById(divID).innerHTML = this.responseText;
+  }
+  
+  xmlReq.open('GET', 'footer.html', true);
   xmlReq.send();
 }
