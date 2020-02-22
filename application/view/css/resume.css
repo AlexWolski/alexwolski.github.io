@@ -1,5 +1,7 @@
 #adobe-dc-view {
-  width: 100%;
-  height: 1000px;
-  /*height: calc(width * 1.2941);*/
+  width: 90%;
+  margin-left: 5%;
+  margin-left: 5%;
+  min-height: 300px;
+  height: calc(92vh - 78px - 75px);
 }

@@ -7,10 +7,10 @@
   background-color: #D5DCE3;
   /*The minimum height of the page is the height the screen minus the header and footer*/
   min-height: calc(100vh - 78px - 75px);
-  padding-left: 15%;
-  padding-right: 15%;
-  padding-top: 10%;
-  padding-bottom: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
   float: none;
   overflow: auto;
 }

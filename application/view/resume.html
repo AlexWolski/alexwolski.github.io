@@ -27,23 +27,20 @@
     <script type="text/javascript" src="js/navbar.js"></script>
     <script type="text/javascript" src="js/copyEmail.js"></script>
     <script type="text/javascript" src="js/profilePicture.js"></script>
+    <script type="text/javascript" src="js/adobeViewer.js"></script>
   </head>
 
-  <body>
+  <body onload="">
     <!-- Will be substituted with the navbar once it loads -->
     <div id="navbar-placeholder"></div>
     <!-- A container for the contents of the page -->
     <div id="page-content">
       <!-- Embedded PDF file -->
       <div id="adobe-dc-view"></div>
+
+      <!-- Immediately after the 'adobe-dc-view' div loads, attatch an AdobeDC object to create a viewer -->
       <script type="text/javascript">
-        document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
-          var adobeDCView = new AdobeDC.View({clientId: "41cb26db63cd42288135f1c23a0dd726", divId: "adobe-dc-view"});
-          adobeDCView.previewFile({
-            content:{location: {url: "http://alexwolski.com/documents/Resume - Alex Wolski 2020.pdf"}},
-            metaData:{fileName: "Resume - Alex Wolski 2020.pdf"}
-          }, {embedMode: "SIZED_CONTAINER"});
-        });
+      	viewPDF('adobe-dc-view', 'http://alexwolski.com/documents/Resume - Alex Wolski 2020.pdf', 'Resume - Alex Wolski 2020.pdf')
       </script>
     </div>
 

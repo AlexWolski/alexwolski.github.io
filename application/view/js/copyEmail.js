@@ -1,4 +1,4 @@
-// Copied from hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
+//Code from hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
 function copyEmail() {
   //Create a textarea, populate it with the email, and hide it
   const textArea = document.createElement('textarea');
