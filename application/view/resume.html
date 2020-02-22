@@ -46,7 +46,9 @@
       </div>
 
       <!-- Embedded PDF file -->
-      <div id="adobe-dc-view"></div>
+      <div id="pdf-view-container">
+        <div id="adobe-dc-view"></div>
+      </div>
     </div>
 
     <!-- Page footer -->
@@ -68,7 +70,7 @@
   <script type="text/javascript">
     //Load the navbar when the page first loads
     loadNavbar();
-    //attatch an AdobeDC object to create a viewer for the resume
+    //Attatch an AdobeDC object to create a viewer for the pdf
     viewPDF('adobe-dc-view', 'IN_LINE', '/documents/Resume - Alex Wolski 2020.pdf', 'Resume - Alex Wolski 2020.pdf')
   </script>
 
