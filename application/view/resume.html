@@ -17,6 +17,8 @@
     <!-- Imports -->
     <link href="css/font.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/navbar.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
     <link href="css/resume.css" rel="stylesheet">
     <link href="css/download.css" rel="stylesheet">
     <script type="text/javascript" src="js/loadHtml.js"></script>
@@ -42,6 +44,10 @@
       <div id="pdf-view-container">
         <div id="adobe-dc-view"></div>
       </div>
+
+      <script type="text/javascript">
+        viewPDF('adobe-dc-view', 'IN_LINE', '/documents/Resume - Alex Wolski 2020.pdf', 'Resume - Alex Wolski 2020.pdf')
+      </script>
     </div>
 
     <!-- Will be substituted with the footer once it loads -->
@@ -52,8 +58,6 @@
     //Load the navbar and footer once the page loads
     loadNavbar('navbar-placeholder');
     loadFooter('footer-placeholder');
-    //Attatch an AdobeDC object to create a viewer for the pdf
-    viewPDF('adobe-dc-view', 'IN_LINE', '/documents/Resume - Alex Wolski 2020.pdf', 'Resume - Alex Wolski 2020.pdf')
   </script>
 
 </html>

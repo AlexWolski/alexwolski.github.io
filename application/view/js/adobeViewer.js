@@ -2,10 +2,12 @@
 function viewPDF(div, embedMode, file, fileName) {
   document.addEventListener("adobe_dc_view_sdk.ready", function() {
     var adobeDCView = new AdobeDC.View({clientId: "41cb26db63cd42288135f1c23a0dd726", divId: div});
-    
+
     adobeDCView.previewFile({
       content:{location: {url: file}},
       metaData:{fileName: fileName}},
       {embedMode: embedMode});
+
+    adobeDCView.setResizable(true);
   });
 }
