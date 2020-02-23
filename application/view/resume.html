@@ -12,8 +12,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <!-- Bluebird Promise library for IE support -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bluebird/3.3.5/bluebird.min.js"></script>
-    <!-- Adobe embedded PDF SDK -->
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
     <!-- Imports -->
     <link href="css/font.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
@@ -45,6 +43,7 @@
         <div id="adobe-dc-view"></div>
       </div>
 
+      <!-- Add a listner to load the pdf viewer once the element is ready -->
       <script type="text/javascript">
         viewPDF('adobe-dc-view', 'IN_LINE', '/documents/Resume - Alex Wolski 2020.pdf', 'Resume - Alex Wolski 2020.pdf')
       </script>
