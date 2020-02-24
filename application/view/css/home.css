@@ -18,11 +18,14 @@
 }
 
 .intro-title {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  font-size: 50px;
 }
 
-h2 {
-  padding-top: 15px;
+.intro-item {
+  margin-top: 15px;
+  margin-bottom: 0px;
+  font-size: 32px;
 }
 
 .striking-text {
