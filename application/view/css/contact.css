@@ -1,0 +1,17 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.contact-info {
+  align-items: vertical;
+  text-align: center;
+}
+
+.contact-icon {
+  color: #506EAF;
+  font-size: 150px;
+}

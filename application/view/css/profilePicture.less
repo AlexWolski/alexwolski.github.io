@@ -10,10 +10,12 @@
 
   background-color: @circle-background;
   border-radius: 50%;
-  width: calc(@circle-size + 20px);
-  height: calc(@circle-size + 20px);
+  width: calc(@circle-size + 20px) !important;
+  height: calc(@circle-size + 20px) !important;
   padding: 10px;
   position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
 
   .circle {
     .mask, .fill, .shadow {

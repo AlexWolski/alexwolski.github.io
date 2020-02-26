@@ -14,22 +14,22 @@
   padding-bottom: 20px;
   padding-left: 50px;
   padding-right: 50px;
-  width: 900px;
+  min-width: 900px;
 }
 
 .intro-title {
-  margin-bottom: 20px;
-  font-size: 50px;
+  margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .intro-item {
   margin-top: 15px;
   margin-bottom: 0px;
-  font-size: 32px;
+  font-size: 35px;
 }
 
-.striking-text {
-  color: #005AD4;
+.highlight-text {
+  color: #506EAF;
   font-weight: bold;
 }
 
@@ -39,6 +39,10 @@
   }
 
   .intro-title {
+    text-align: center;
+  }
+
+  .intro-item {
     text-align: center;
   }
 }
