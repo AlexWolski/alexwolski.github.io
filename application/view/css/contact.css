@@ -9,9 +9,28 @@
 .contact-info {
   align-items: vertical;
   text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+
+  width: 250px;
+  height: 220px;
+}
+
+.contact-text {
+  color: black;
 }
 
 .contact-icon {
   color: #506EAF;
   font-size: 150px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.no-underline:hover {
+  text-decoration: none !important;
+}
+
+.copy-button:hover {
+  cursor: pointer;
 }
