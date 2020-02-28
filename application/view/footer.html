@@ -11,6 +11,7 @@
     <!-- Imports -->
     <link href="css/font.css" rel="stylesheet">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/copyPopup.css" rel="stylesheet">
   </head>
 
   <body>
@@ -19,10 +20,10 @@
       <div class="unselectable">
         <a class="footer-link fab fa-linkedin-in" target="_blank" href="https://www.linkedin.com/in/alexjwolski/"></a>
         <a class="footer-link fab fa-github" target="_blank" href="https://github.com/AlexWolski"></a>
-        <div class="footer-link fas fa-envelope" onclick="copyEmail()">
-          <div id="copied-popup" class="fade-out unselectable">
+        <div class="footer-link fas fa-envelope" onclick="copyText('wolski.alexander.john@gmail.com', 'copied-email-footer')">
+          <div id="copied-email-footer" class="fade-out copied-popup">
             Copied!
-            <div id="popup-triangle"></div>
+            <div class="popup-triangle"></div>
           </div>
         </div>
       </div>
