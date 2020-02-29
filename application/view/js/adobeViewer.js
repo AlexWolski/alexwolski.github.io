@@ -9,8 +9,6 @@ function viewPDF(div, embedMode, file, fileName) {
       content:{location: {url: file}},
       metaData:{fileName: fileName}},
       {embedMode: embedMode});
-
-    adobeDCView.setResizable(true);
   });
 }
 
