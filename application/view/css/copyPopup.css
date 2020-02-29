@@ -2,6 +2,7 @@
   background-color: #2481FF;
   color: white;
   font-weight: normal;
+  font-size: 20px;
   width: 80px;
   height: 30px;
   padding: 5px;
@@ -10,8 +11,8 @@
   /* Hide popup when page first loads*/
   display: none;
   /* Center the popup above the parent */
-  left: calc(-1 * (40px - 20px));
-  bottom: 65px;
+/*  left: calc(-1 * (40px - 20px));
+  bottom: 65px;*/
   pointer-events: none;
 }
 

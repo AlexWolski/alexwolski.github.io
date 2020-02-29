@@ -14,8 +14,33 @@ function copyText(text, popupID) {
   //Remove the textarea from the document
   document.body.removeChild(textArea);
   
-  //A popup saying the email has been copied
+  //Get the popup element saying the email has been copied
   const copiedPopup = document.getElementById(popupID);
+  //Position the popup above its parent
+  positionPopup(copiedPopup);
+  //Toggle the animation on the popup
+  togglePopupAnimation(copiedPopup);
+}
+
+//Translate the element to be centered horizontally with and above its parent
+function positionPopup(copiedPopup) {
+  //Find the parent element of the popup
+  const popupParent = copiedPopup.parentElement;
+
+  //Calculate the translation needed to center the element
+  var translateX = (popupParent.offsetWidth - 80)/2;
+  var translateY = popupParent.offsetHeight + 40;
+
+  //Remove the padding from the translation
+  var computedStyle = getComputedStyle(popupParent);
+  translateX -= (parseFloat(computedStyle.paddingLeft) + parseFloat(computedStyle.paddingRight))/2;
+  translateY -= (parseFloat(computedStyle.paddingTop) + parseFloat(computedStyle.paddingBottom))/2;
+
+  copiedPopup.style.transform = "translate(" + translateX + "px, -" + translateY + "px)";
+}
+
+//Change the class of the popup element to fade in and back out
+function togglePopupAnimation(copiedPopup) {
   //When the page first loads, the popup is invisible. So make sure its visible
   copiedPopup.style.display = 'block';
   //Toggle the animation of the popup fading in
@@ -26,7 +51,6 @@ function copyText(text, popupID) {
     sleep(1000);
     copiedPopup.className = 'fade-out copied-popup';
   }, 500);
-
 }
 
 function sleep(ms) {

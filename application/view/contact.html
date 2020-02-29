@@ -37,7 +37,7 @@
         <div class="flex-container">
           <div class="contact-info">
             <a href="tel:+1-415-342-1179" class="no-underline"><div>
-              <div class="contact-text">Phone</div>
+              <div class="contact-text unselectable">Phone</div>
               <div class="contact-icon fas fa-phone"></div>
             </div></a>
 
@@ -45,9 +45,14 @@
           </div>
 
           <div class="contact-info">
-            <div class="copy-button" onclick="alert('copy email')">
-              <div class="contact-text">Email</div>
-              <div class="contact-icon fas fa-envelope"></div>
+            <div class="copy-button" onclick="copyText('wolski.alexander.john@gmail.com', 'copied-email')">
+              <div class="contact-text unselectable">Email</div>
+              <div class="contact-icon fas fa-envelope">
+                <div id="copied-email" class="fade-out copied-popup">
+                  Copied!
+                  <div class="popup-triangle"></div>
+                </div>
+              </div>
             </div>
             <div class="contact-text">wolski.alexander.john@gmail.com</div>
           </div>
@@ -55,34 +60,44 @@
 
         <div class="flex-container">
           <div class="contact-info">
-            <div class="copy-button" onclick="alert('copy skype')">
-              <div class="contact-text">Skype</div>
-              <div class="contact-icon fab fa-skype"></div>
+            <div class="copy-button" onclick="copyText('live:.cid.603e0696779e9285', 'copied-skype')">
+              <div class="contact-text unselectable">Skype</div>
+              <div class="contact-icon fab fa-skype">
+                <div id="copied-skype" class="fade-out copied-popup">
+                  Copied!
+                  <div class="popup-triangle"></div>
+                </div>
+              </div>
             </div>
             <div class="contact-text">live:.cid.603e0696779e9285</div>
           </div>
 
           <div class="contact-info">
-            <div class="copy-button" onclick="alert('copy zoom')">
-              <div class="contact-text">Zoom Meeting ID</div>
-              <div class="contact-icon fas fa-video"></div>
+            <div class="copy-button" onclick="copyText('533-399-7915', 'copied-zoom')">
+              <div class="contact-text unselectable">Zoom Meeting ID</div>
+              <div class="contact-icon fas fa-video">
+                <div id="copied-zoom" class="fade-out copied-popup">
+                  Copied!
+                  <div class="popup-triangle"></div>
+                </div>
+              </div>
             </div>
             <div class="contact-text">533-399-7915</div>
           </div>
         </div>
       </div>
 
-      <h1 class="page-title" style="margin-top: 75px; margin-bottom: 30px;"><b>Other Links<b></h1>
+      <h1 class="page-title" style="margin-top: 50px; margin-bottom: 30px;"><b>Other Links<b></h1>
 
       <div class="flex-container">
         <a class="contact-info no-underline" target="_blank" href="https://www.linkedin.com/in/alexjwolski/">
-          <div class="contact-text">LinkedIn</div>
+          <div class="contact-text unselectable">LinkedIn</div>
           <div class="contact-icon fab fa-linkedin-in"></div>
           <div class="contact-text">Lets Connect</div>
         </a>
 
         <a class="contact-info no-underline" target="_blank" href="https://github.com/AlexWolski">
-          <div class="contact-text">Github</div>
+          <div class="contact-text unselectable">Github</div>
           <div class="contact-icon fab fa-github"></div>
           <div class="contact-text">View My Projects</div>
         </a>
