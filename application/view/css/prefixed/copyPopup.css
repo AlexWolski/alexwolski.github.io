@@ -1,0 +1,49 @@
+.copied-popup {
+  background-color: #2481FF;
+  color: white;
+  font-weight: normal;
+  font-size: 20px;
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border-radius: 10px;
+  position: absolute;
+  /* Hide popup when page first loads*/
+  display: none;
+  /* Center the popup above the parent */
+/*  left: calc(-1 * (40px - 20px));
+  bottom: 65px;*/
+  pointer-events: none;
+}
+
+.popup-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 0 15px;
+  border-color: #2481FF transparent transparent transparent;
+  position: absolute;
+  /* Center the triangle below the popup body */
+  left: calc(40px - 15px);
+}
+
+.fade-in {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: visibility 0s, opacity 0.1s linear;
+  transition: visibility 0s, opacity 0.1s linear;
+}
+
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s 1s, opacity 1s linear;
+  transition: visibility 0s 1s, opacity 1s linear;
+}
+
+.unselectable {
+  -webkit-user-select: none;  /* Chrome & Safari */
+  -moz-user-select: none;     /* Firefox */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none; 
+}

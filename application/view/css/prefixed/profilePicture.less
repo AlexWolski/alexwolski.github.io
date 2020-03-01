@@ -1,0 +1,87 @@
+/* Modified from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9 */
+
+.radial-progress {
+  @circle-size: 400px;
+  @circle-background: #D5DCE3;
+  @circle-color: #A1A1A1;
+  @inset-size: 370px;
+  @inset-color: #D5DCE3;
+  @transition-length: 1s;
+
+  background-color: @circle-background;
+  border-radius: 50%;
+  width: calc(@circle-size + 20px) !important;
+  height: calc(@circle-size + 20px) !important;
+  padding: 10px;
+  position: relative;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  .circle {
+    .mask, .fill, .shadow {
+      width: @circle-size;
+      height: @circle-size;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .mask, .fill {
+      -webkit-backface-visibility: hidden;
+      transition: -webkit-transform @transition-length;
+      transition: -ms-transform @transition-length;
+      transition: transform @transition-length;
+      border-radius: 50%;
+    }
+    .mask {
+      clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+      .fill {
+        clip: rect(0px, @circle-size/2, @circle-size, 0px);
+        background-color: @circle-color;
+      }
+    }
+  }
+  .inset {
+    position: absolute;
+    width: @inset-size;
+    height: @inset-size;
+    margin-left: (@circle-size - @inset-size)/2;
+    margin-top: (@circle-size - @inset-size)/2;
+
+    background-color: @inset-color;
+    border-radius: 50%;
+  }
+  .profile-picture {
+    position: absolute;
+    width: @inset-size;
+    height: @inset-size;
+    margin-left: (@circle-size - @inset-size)/2;
+    margin-top: (@circle-size - @inset-size)/2;
+    border-radius: 50%;
+    opacity: 0;
+  }
+
+  .fade-in-pfp {
+    opacity: 1;
+    transition: opacity 1s linear;
+  }
+
+  @i: 0;
+  @increment: 180deg / 100;
+  .loop (@i) when (@i <= 100) {
+    &[data-progress="@{i}"] {
+      .circle {
+        .mask.full, .fill {
+          -webkit-transform: rotate(@increment * @i);
+          -ms-transform: rotate(@increment * @i);
+          transform: rotate(@increment * @i);
+        } 
+        .fill.fix {
+          -webkit-transform: rotate(@increment * @i * 2);
+          -ms-transform: rotate(@increment * @i * 2);
+          transform: rotate(@increment * @i * 2);
+        }
+      }
+    }
+    .loop(@i + 1);
+  }
+  .loop(@i);
+}

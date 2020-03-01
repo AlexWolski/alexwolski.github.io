@@ -1,0 +1,25 @@
+body {
+  font-size: 1em;
+}
+
+#navbar-placeholder {
+  min-height: 78px;
+  background-color: #494949;
+}
+
+#page-content {
+  background-color: #D5DCE3;
+  /*The minimum height of the page is the height the screen minus the header and footer*/
+  min-height: calc(100vh - 78px - 75px);
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  float: none;
+  overflow: auto;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 50px !important;
+}
