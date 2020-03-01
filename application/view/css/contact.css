@@ -1,19 +1,16 @@
-.flex-container {
-  display: flex;
-  flex-direction: row;
+.contacts-grid {
+  display: grid;
   align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2em 1em;
+
+  max-width: 1500px;
+  
 }
 
 .contact-info {
   align-items: vertical;
   text-align: center;
-  margin-left: 30px;
-  margin-right: 30px;
-
-  width: 250px;
-  height: 220px;
 }
 
 .contact-text {
@@ -23,6 +20,7 @@
 .contact-icon {
   color: #506EAF;
   font-size: 100px;
+  font-weight: normal;
   margin-top: 10px;
   margin-bottom: 10px;
 }
