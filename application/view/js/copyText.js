@@ -1,5 +1,5 @@
 //Code from hackernoon.com/copying-text-to-clipboard-with-javascript-df4d4988697f
-function copyText(text, popupID) {
+function copyText(text, popupID, displacementY) {
   //Create a textarea, populate it with the email, and hide it
   const textArea = document.createElement('textarea');
   textArea.value = text;
@@ -17,19 +17,19 @@ function copyText(text, popupID) {
   //Get the popup element saying the email has been copied
   const copiedPopup = document.getElementById(popupID);
   //Position the popup above its parent
-  positionPopup(copiedPopup);
+  positionPopup(copiedPopup, displacementY);
   //Toggle the animation on the popup
   togglePopupAnimation(copiedPopup);
 }
 
 //Translate the element to be centered horizontally with and above its parent
-function positionPopup(copiedPopup) {
+function positionPopup(copiedPopup, displacementY) {
   //Find the parent element of the popup
   const popupParent = copiedPopup.parentElement;
 
   //Calculate the translation needed to center the element
   var translateX = (popupParent.offsetWidth - 80)/2;
-  var translateY = popupParent.offsetHeight + 40;
+  var translateY = popupParent.offsetHeight + displacementY;
 
   //Remove the padding from the translation
   var computedStyle = getComputedStyle(popupParent);
