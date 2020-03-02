@@ -10,17 +10,29 @@
 
   background-color: @circle-background;
   border-radius: 50%;
-  width: calc(@circle-size + 20px) !important;
-  height: calc(@circle-size + 20px) !important;
+
+  //@circle-size + 20px
+  width: 420px;
+  height: 420px;
   padding: 10px;
   position: relative;
   flex-grow: 0;
   flex-shrink: 0;
 
   .circle {
-    .mask, .fill, .shadow {
-      width: @circle-size;
-      height: @circle-size;
+    width: 100%;
+    height: 0px;
+
+    .mask, .shadow {
+      //@circle-size
+      width: 95.238095%;
+      height: 95.238095%;
+      position: absolute;
+      border-radius: 50%;
+    }
+    .fill {
+      width: 100%;
+      height: 100%;
       position: absolute;
       border-radius: 50%;
     }
@@ -32,29 +44,35 @@
       border-radius: 50%;
     }
     .mask {
-      clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+      // clip: rect(0px, @circle-size, @circle-size, @circle-size/2);
+      clip-path: polygon(49.9% 0, 100% 0, 100% 100%, 49.9% 100%);
       .fill {
-        clip: rect(0px, @circle-size/2, @circle-size, 0px);
+        // clip: rect(0px, @circle-size/2, @circle-size, 0px);
+        clip-path: polygon(0 0, 50.1% 0, 50.1% 100%, 0 100%);
         background-color: @circle-color;
       }
     }
   }
   .inset {
     position: absolute;
-    width: @inset-size;
-    height: @inset-size;
-    margin-left: (@circle-size - @inset-size)/2;
-    margin-top: (@circle-size - @inset-size)/2;
+    //@inset-size
+    width: 88.095238%;
+    height: 88.095238%;
+    //(@circle-size - @inset-size)/2
+    margin-left: 3.5714285%;
+    margin-top: 3.5714285%;
 
     background-color: @inset-color;
     border-radius: 50%;
   }
   .profile-picture {
     position: absolute;
-    width: @inset-size;
-    height: @inset-size;
-    margin-left: (@circle-size - @inset-size)/2;
-    margin-top: (@circle-size - @inset-size)/2;
+    //@inset-size
+    width: 88.095238%;
+    height: 88.095238%;
+    //(@circle-size - @inset-size)/2
+    margin-left: 3.5714285%;
+    margin-top: 3.5714285%;
     border-radius: 50%;
     opacity: 0;
   }
