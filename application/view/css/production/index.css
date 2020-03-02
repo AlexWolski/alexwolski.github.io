@@ -20,6 +20,9 @@ wbr:after {
   padding-right: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
+
+  float: none;
+  overflow: auto;
 }
 
 .page-title {
