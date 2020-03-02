@@ -1,11 +1,26 @@
 .contacts-grid {
   display: grid;
-  align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2em 1em;
-
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-areas: "a b c d";
   max-width: 1500px;
 }
+
+.cell-a {
+   grid-area: a;
+}
+
+.cell-b {
+   grid-area: b;
+}
+
+.cell-c {
+   grid-area: c;
+}
+
+.cell-d {
+   grid-area: d;
+}
+
 
 .contact-info {
   align-items: vertical;
@@ -18,20 +33,16 @@
 
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 10%;
 
   box-shadow: 0px 0px 10px grey;
   transition: box-shadow 0.1s linear;
-  user-select: none; 
+  user-select: none;
 }
 
 .contact-info:hover {
   box-shadow: 0px 0px 20px grey;
   transition: box-shadow 0.1s linear;
-}
-
-.contact-info:hover {
   cursor: pointer;
 }
 
@@ -56,10 +67,6 @@
   margin-bottom: 10px;
 }
 
-.no-underline:hover {
+a:hover {
   text-decoration: none !important;
-}
-
-.copy-button:hover {
-  cursor: pointer;
 }

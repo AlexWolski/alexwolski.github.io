@@ -78,10 +78,7 @@
 /* Card styling and animation */
 
 figure.anim-card img {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.anim-card:hover img {
@@ -94,21 +91,13 @@ figure.anim-card h2 {
 	left: 0;
 	width: 100%;
 	color: #fff;
-	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
-	-webkit-transition: color 0.35s, -webkit-transform 0.35s;
-	transition: color 0.35s, -webkit-transform 0.35s;
 	transition: transform 0.35s, color 0.35s;
-	transition: transform 0.35s, color 0.35s, -webkit-transform 0.35s;
-	-webkit-transform: translate3d(0,-50%,0);
 	transform: translate3d(0,-50%,0);
 }
 
 figure.anim-card figcaption::before,
 figure.anim-card p {
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
 }
 
 figure.anim-card p {
@@ -118,19 +107,16 @@ figure.anim-card p {
 	padding: 2em;
 	width: 100%;
 	opacity: 0;
-	-webkit-transform: translate3d(0,10px,0);
 	transform: translate3d(0,10px,0);
 }
 
 figure.anim-card:hover h2 {
 	color: #fff;
-	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-200%,0);
 	transform: translate3d(0,-50%,0) translate3d(0,-100%,0);
 }
 
 figure.anim-card:hover figcaption::before,
 figure.anim-card:hover p {
 	opacity: 1;
-	-webkit-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
 }

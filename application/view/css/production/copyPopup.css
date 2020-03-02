@@ -27,14 +27,12 @@
 .fade-in {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: visibility 0s, opacity 0.1s linear;
   transition: visibility 0s, opacity 0.1s linear;
 }
 
 .fade-out {
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: visibility 0s 1s, opacity 1s linear;
   transition: visibility 0s 1s, opacity 1s linear;
 }
 

@@ -6,6 +6,7 @@
     <!-- Meta data -->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
     <!-- Bootstrap CDNs -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -34,80 +35,78 @@
 
       <!-- Links to contacts and other websites -->
       <div class="contacts-grid" style="margin: auto;">
-        <div class="contacts-grid">
-          <a href="tel:+1-415-342-1179" class="no-underline">
-            <div class="contact-info" href="tel:+1-415-342-1179" class="no-underline">
-                <div class="contact-title">Phone</div>
-                <div class="contact-icon fas fa-phone"></div>
-                <div class="contact-text">+1 (415) 342-1179</div>
+        <div class="contact-info" href="tel:+1-415-342-1179">
+          <a class="cell-a" href="tel:+1-415-342-1179">
+            <div>
+              <div class="contact-title">Phone</div>
+              <div class="contact-icon fas fa-phone"></div>
+              <div class="contact-text">+1 (415) 342-1179</div>
             </div>
           </a>
-
-          <div class="contact-info" onclick="copyText('wolski.alexander.john@gmail.com', 'copied-email', 90)">
-            <div class="contact-title">Email</div>
-            <div class="contact-icon fas fa-envelope">
-              <div id="copied-email" class="fade-out copied-popup">
-                Copied!
-                <div class="popup-triangle"></div>
-              </div>
-            </div>
-            <div class="contact-text"><span>wolski.alexander<wbr>.john<wbr/>@gmail.com</span></div>
-          </div>
         </div>
 
-        <div class="contacts-grid">
-          <div class="contact-info" onclick="copyText('live:.cid.603e0696779e9285', 'copied-skype', 90)">
-            <div class="contact-title">Skype</div>
-            <div class="contact-icon fab fa-skype">
-              <div id="copied-skype" class="fade-out copied-popup">
-                Copied!
-                <div class="popup-triangle"></div>
-              </div>
+        <div class="contact-info cell-b" onclick="copyText('wolski.alexander.john@gmail.com', 'copied-email', 90)">
+          <div class="contact-title">Email</div>
+          <div class="contact-icon fas fa-envelope">
+            <div id="copied-email" class="fade-out copied-popup">
+              Copied!
+              <div class="popup-triangle"></div>
             </div>
-            <div class="contact-text"><span>live:<wbr>.cid<wbr/>.603<wbr/>e0696779e9285</span></div>
           </div>
+          <div class="contact-text"><span>wolski.alexander<wbr>.john<wbr/>@gmail.com</span></div>
+        </div>
 
-          <div class="contact-info" onclick="copyText('533-399-7915', 'copied-zoom', 90)">
-            <div class="contact-title">Zoom Meeting ID</div>
-            <div class="contact-icon fas fa-video">
-              <div id="copied-zoom" class="fade-out copied-popup">
-                Copied!
-                <div class="popup-triangle"></div>
-              </div>
+        <div class="contact-info cell-c" onclick="copyText('live:.cid.603e0696779e9285', 'copied-skype', 90)">
+          <div class="contact-title">Skype</div>
+          <div class="contact-icon fab fa-skype">
+            <div id="copied-skype" class="fade-out copied-popup">
+              Copied!
+              <div class="popup-triangle"></div>
             </div>
-            <div class="contact-text">533-399-7915</div>
           </div>
+          <div class="contact-text"><span>live:<wbr>.cid<wbr/>.603<wbr/>e0696779e9285</span></div>
+        </div>
+
+        <div class="contact-info cell-d" onclick="copyText('533-399-7915', 'copied-zoom', 90)">
+          <div class="contact-title">Zoom Meeting ID</div>
+          <div class="contact-icon fas fa-video">
+            <div id="copied-zoom" class="fade-out copied-popup">
+              Copied!
+              <div class="popup-triangle"></div>
+            </div>
+          </div>
+          <div class="contact-text">533-399-7915</div>
         </div>
       </div>
 
       <h1 class="page-title" style="margin-top: 50px; margin-bottom: 30px;"><b>Other Links</b></h1>
 
       <div class="contacts-grid" style="margin: auto;">
-        <div class="contacts-grid" style="grid-gap: 0em 1em;">
-          <!-- Placeholder column -->
-          <div></div>
+        <!-- Placeholder column -->
+        <div class=" cell-a"></div>
 
-          <div class="contact-info">
-            <a class="no-underline" target="_blank" href="https://www.linkedin.com/in/alexjwolski/">
+        <div class="contact-info cell-b">
+          <a target="_blank" href="https://www.linkedin.com/in/alexjwolski/">
+            <div>
               <div class="contact-title">LinkedIn</div>
               <div class="contact-icon fab fa-linkedin-in"></div>
               <div class="contact-text">Lets Connect!</div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
 
-        <div class="contacts-grid" style="grid-gap: 0em 1em;">
-          <div class="contact-info">
-            <a class="no-underline" target="_blank" href="https://github.com/AlexWolski">
+        <div class="contact-info cell-c">
+          <a target="_blank" href="https://github.com/AlexWolski">
+            <div>
               <div class="contact-title">Github</div>
               <div class="contact-icon fab fa-github"></div>
               <div class="contact-text">View My Projects</div>
-            </a>
-          </div>
-
-          <!-- Placeholder column -->
-          <div></div>
+            </div>
+          </a>
         </div>
+
+        <!-- Placeholder column -->
+        <div class=" cell-d"></div>
       </div>
     </div>
 

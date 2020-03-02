@@ -1,20 +1,39 @@
 .contacts-grid {
+  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2em 1em;
-
+  -ms-grid-columns: (minmax(300px, 1fr))[4];
+  grid-template-columns: repeat(4, minmax(300px, 1fr));
+      grid-template-areas: "a b c d";
   max-width: 1500px;
 }
 
+.cell-a {
+   -ms-grid-row: 1;
+   -ms-grid-column: 1;
+   grid-area: a;
+}
+
+.cell-b {
+   -ms-grid-row: 1;
+   -ms-grid-column: 2;
+   grid-area: b;
+}
+
+.cell-c {
+   -ms-grid-row: 1;
+   -ms-grid-column: 3;
+   grid-area: c;
+}
+
+.cell-d {
+   -ms-grid-row: 1;
+   -ms-grid-column: 4;
+   grid-area: d;
+}
+
+
 .contact-info {
-  -webkit-box-align: vertical;
-     -moz-box-align: vertical;
-      -ms-flex-align: vertical;
-          align-items: vertical;
+  align-items: vertical;
   text-align: center;
 
   background-color: #fff;
@@ -24,32 +43,19 @@
 
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 10%;
 
-  -webkit-box-shadow: 0px 0px 10px grey;
-
-          box-shadow: 0px 0px 10px grey;
-  -webkit-transition: -webkit-box-shadow 0.1s linear;
-  transition: -webkit-box-shadow 0.1s linear;
+  box-shadow: 0px 0px 10px grey;
   transition: box-shadow 0.1s linear;
-  transition: box-shadow 0.1s linear, -webkit-box-shadow 0.1s linear;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none; 
+          user-select: none;
 }
 
 .contact-info:hover {
-  -webkit-box-shadow: 0px 0px 20px grey;
-          box-shadow: 0px 0px 20px grey;
-  -webkit-transition: -webkit-box-shadow 0.1s linear;
-  transition: -webkit-box-shadow 0.1s linear;
+  box-shadow: 0px 0px 20px grey;
   transition: box-shadow 0.1s linear;
-  transition: box-shadow 0.1s linear, -webkit-box-shadow 0.1s linear;
-}
-
-.contact-info:hover {
   cursor: pointer;
 }
 
@@ -74,10 +80,6 @@
   margin-bottom: 10px;
 }
 
-.no-underline:hover {
+a:hover {
   text-decoration: none !important;
-}
-
-.copy-button:hover {
-  cursor: pointer;
 }
