@@ -2,6 +2,11 @@ body {
   font-size: 1em;
 }
 
+/*Compatibility for IE*/
+wbr:after {
+  content: "\00200B";
+}
+
 #navbar-placeholder {
   min-height: 78px;
   background-color: #494949;
