@@ -118,7 +118,7 @@
 }
 
 .anim-card:hover .backdrop {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 /* Set the color of the overlay and backdrop on the cards */
