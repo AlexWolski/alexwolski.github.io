@@ -1,16 +1,23 @@
 // Modified from https://medium.com/@andsens/radial-progress-indicator-using-css-a917b80c43f9
+
 // Fade the profile picture in and trigger the circle animation
 $(document).ready(function() {
   $('head style[type="text/css"]').attr('type', 'text/css');
+
   window.load = function() {
     $('.radial-progress').attr('data-progress', 100);
     $('.profile-picture').addClass('fade-in-pfp');
+    resizeProfilePicture();
   }
+
   setTimeout(window.load);
 })
 
-// On window resize, resize the profile picture
-$(window).resize(function() {
+//Resize the profile picture when the window resizes
+window.onresize = resizeProfilePicture;
+
+//Resize the profile picture based on the screen width
+function resizeProfilePicture() {
   //The min and max screen widths where the profile picture will scale
   const minWindowWidth = 200;
   const maxWindowWidth = 1470;
@@ -38,4 +45,4 @@ $(window).resize(function() {
 
     $('.radial-progress').width(pfpWidth).height(pfpWidth);
   }
-});
+}
