@@ -57,7 +57,7 @@
 }
 
 /* Formatting of the card title */
-.anim-card .card-title {
+.card-title {
   /* Simple font formatting for the card title */
   word-spacing: 0.1em;
   font-size: 2em;
@@ -68,6 +68,7 @@
   display: inline-block;
   position: relative;
 
+  padding: 0.5em;
   height: 2.5em;
   color: #fff;
   transition: transform 0.35s, color 0.35s;
@@ -81,12 +82,13 @@
 }
 
 /* Font formatting and animations for the card description */
-.anim-card .card-desc {
+.card-desc {
   /* Position the title in the center */
   top: 30%;
   display: inline-block;
   position: relative;
 
+  padding: 1em;
   letter-spacing: 1px;
   font-size: 1em;
   opacity: 0;
@@ -100,7 +102,7 @@
 }
 
 /* A backdrop to make the text more visible*/
-.anim-card .backdrop {
+.backdrop {
   /* Position the backdrop behind the text*/
   position: absolute;
   left: 0;
@@ -111,7 +113,6 @@
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  background-color: black;
   opacity: 0;
   transition: opacity 0.35s;
 }
@@ -120,11 +121,7 @@
   opacity: 0.5;
 }
 
-/* Add padding to all text */
-.anim-card .card-title {
-  padding: 0.5em;
-}
-
-.anim-card .card-desc {
-  padding: 1em;
+/* Set the color of the overlay and backdrop on the cards */
+.anim-card, .backdrop {
+  background-color: #000;
 }
